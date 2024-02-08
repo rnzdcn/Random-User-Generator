@@ -17,6 +17,7 @@ export function useGetUsers() {
 
       return await response.json()
     },
+    refetchOnWindowFocus:false,
     select: ({ results }: { results: Array<Results> }) => {
       return results.map((result) => {
         return {
