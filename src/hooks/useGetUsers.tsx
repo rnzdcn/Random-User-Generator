@@ -18,6 +18,8 @@ export function useGetUsers() {
       return await response.json()
     },
     refetchOnWindowFocus:false,
+    refetchIntervalInBackground: false,
+    refetchOnMount: false,
     select: ({ results }: { results: Array<Results> }) => {
       return results.map((result) => {
         return {
